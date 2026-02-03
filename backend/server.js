@@ -30,5 +30,5 @@ app.use("/api/posts", PostRouter);
 
 
 app.listen(PORT, () => {
-  console.log('Server running ...')
+  console.log(`Server running on ${PORT} ...`)
 });

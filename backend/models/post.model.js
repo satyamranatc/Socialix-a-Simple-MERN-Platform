@@ -11,6 +11,8 @@ const postSchema = new mongoose.Schema({
         required:true
     }
 
+},{
+    timestamps:true
 });
 
 export default mongoose.Model("Post",postSchema)

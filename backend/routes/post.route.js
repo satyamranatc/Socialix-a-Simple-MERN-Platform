@@ -3,8 +3,8 @@ import {getAllPosts, createPost} from "../controllers/post.controller.js"
 
 const router = Router();
 
-router.get("/", getAllPosts);
-router.post("/", createPost);
+router.get("/getAllPosts", getAllPosts);
+router.post("/createPost", createPost);
 
 
 
