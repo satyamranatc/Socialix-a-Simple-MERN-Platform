@@ -1,7 +1,7 @@
 import postModel from "../models/post.model.js";
 
 export async function getAllPosts(req,res) {
-    let posts = await postModel.find().populate("uploadedBy");
+    let posts = await postModel.find().populate("uploadedBy").sort({createdAt:-1});
     return res.json(posts);
 };
 

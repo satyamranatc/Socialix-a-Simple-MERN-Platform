@@ -14,14 +14,15 @@ export async function getUserById(req, res) {
 
 export async function registerUser(req, res) {
   let newUser = req.body;
-
+  let user ;
   try {
-    await userModel.create(newUser);
+    user = new userModel(newUser);
+    await user.save();
   } catch (e) {
     return res.json({ err: e });
   }
 
-  return res.json({ msg: "User Created Successfully!" });
+ return res.json(user);
 }
 
 
